@@ -22,6 +22,7 @@ import com.inetbanking.utilities.ReadConfig;
 
 public class BaseClass {
 
+	// read variable from config file
 	ReadConfig readconfig=new ReadConfig();
 	
 	public String baseURL=readconfig.getApplicationURL();
@@ -33,8 +34,12 @@ public class BaseClass {
 	
 	@Parameters("browser")
 	@BeforeClass
+	
+	//---- this set of action always need to run before running any TC-----
 	public void setup(String br)
 	{			
+		
+		//--- log4j is initiated ----------
 		logger = Logger.getLogger("ebanking");
 		PropertyConfigurator.configure("Log4j.properties");
 		

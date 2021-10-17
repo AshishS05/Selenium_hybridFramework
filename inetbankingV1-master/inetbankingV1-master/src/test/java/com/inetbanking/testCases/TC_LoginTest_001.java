@@ -19,6 +19,7 @@ public class TC_LoginTest_001 extends BaseClass
 			
 		logger.info("URL is opened");
 		
+		//-- create a object of login page of POM
 		LoginPage lp=new LoginPage(driver);
 		lp.setUserName(username);
 		logger.info("Entered username");
@@ -30,7 +31,7 @@ public class TC_LoginTest_001 extends BaseClass
 		
 		if(driver.getTitle().equals("Guru99 Bank Manager HomePage"))
 		{
-			Assert.assertTrue(true);
+			Assert.assertTrue(true); // compare the conditions
 			logger.info("Login test passed");
 		}
 		else

@@ -6,16 +6,17 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage {  //created class
 
-	WebDriver ldriver;
+	WebDriver ldriver;  // create driver
 	
-	public LoginPage(WebDriver rdriver)
+	public LoginPage(WebDriver rdriver) // create constructor take driver as parameter
 	{
-		ldriver=rdriver;
-		PageFactory.initElements(rdriver, this);
-	}
-		
+		ldriver=rdriver; // initiate the driver
+		PageFactory.initElements(rdriver, this); 
+	}//------ constructor is created
+	
+	//----------- find all element all available on page
 	@FindBy(name="uid")
 	@CacheLookup
 	WebElement txtUserName;
@@ -33,7 +34,7 @@ public class LoginPage {
 	@CacheLookup
 	WebElement lnkLogout;
 	
-	
+	//------------- action method for all above element
 	
 	public void setUserName(String uname)
 	{
