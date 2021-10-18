@@ -61,7 +61,7 @@ public class TC_LoginDDT_002 extends BaseClass
 		
 	}
 	
-	
+	//---- read data from excel file
 	@DataProvider(name="LoginData")
 	String [][] getData() throws IOException
 	{
